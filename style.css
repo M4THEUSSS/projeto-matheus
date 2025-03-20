@@ -1,0 +1,444 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho com imagem de fundo */
+.header-banner {
+    background: url('path-to-your-image.jpg') no-repeat center center/cover; /* Substitua pelo caminho correto da imagem */
+    color: #ac5624;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header-banner h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.cta-buttons .btn-orcamento, .cta-buttons .btn-servicos {
+    background-color: #83712a; /* Cor dourada */
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.cta-buttons .btn-orcamento:hover, .cta-buttons .btn-servicos:hover {
+    background-color: #e0b30d;
+}
+
+/* Estilo para a seção Banner */
+.banner, .banner2{
+    background-color: #F9E79F; /* Cor de fundo amarela suave */
+    color: #333;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.banner2{
+    background-color: #333;
+}
+
+.banner h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #2C3E50; /* Cor escura para o título */
+    margin-bottom: 20px;
+}
+
+.banner2 h2{
+    font-size: 48px;
+    font-weight: bold;
+    color: #2C3E50; /* Cor escura para o título */
+    margin-bottom: 20px;
+}
+
+.banner .banner2 p {
+    font-size: 20px;
+    color: #5D6D7E; /* Cor suave para o texto */
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: left;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2C3E50;
+}
+
+.card p {
+    font-size: 16px;
+    color: #5D6D7E;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-buttons .btn-orcamento, .cta-buttons .btn-servicos {
+    background-color: #F1C40F; /* Cor dourada */
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-buttons .btn-orcamento:hover, .cta-buttons .btn-servicos:hover {
+    background-color: #e0b30d; /* Efeito hover mais escuro */
+}
+
+/* Estilo para a seção de Projetos Hidráulicos e Sanitários */
+.projetos {
+    background-color: #2C3E50; /* Cor escura para o fundo */
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.projetos h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #F1C40F; /* Cor dourada para o título */
+}
+
+.projetos p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    color: #BDC3C7; /* Cor suave para o texto */
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #34495E; /* Cor mais escura para os cards */
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: left;
+    position: relative;
+}
+
+.numero {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background-color: #F1C40F; /* Cor dourada para o número */
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #F1C40F; /* Cor dourada para o título dos cards */
+}
+
+.card p {
+    font-size: 16px;
+    color: #BDC3C7; /* Cor suave para o texto nos cards */
+}
+
+
+/* Seções */
+.secao {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Serviços */
+.servicos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.servico {
+    width: 30%;
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.servico h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para a seção de Projetos e Portfólio */
+.projetos-portifolio {
+    background-color: #72787e; /* Cor de fundo escura */
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.projetos-portifolio h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #F1C40F; /* Cor dourada para o título */
+}
+
+.projetos-portifolio p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    color: #BDC3C7; /* Cor suave para o texto */
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #34495E; /* Cor mais escura para os cards */
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: left;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #F1C40F; /* Cor dourada para o título dos cards */
+}
+
+.card p {
+    font-size: 16px;
+    color: #BDC3C7; /* Cor suave para o texto nos cards */
+}
+
+.portfolio {
+    margin-top: 60px;
+}
+
+.portfolio h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #F1C40F; /* Cor dourada para o título */
+}
+
+.portfolio p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #BDC3C7; /* Cor suave para a descrição */
+}
+
+.portfolio-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.portfolio-card {
+    width: 30%;
+    text-align: center;
+}
+
+.portfolio-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.portfolio-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #F1C40F;
+}
+
+.portfolio-card p {
+    font-size: 16px;
+    color: #BDC3C7;
+}
+
+/* Estilo para a seção Sobre */
+.sobre {
+    background-color: #F1C40F; /* Cor amarela para fundo */
+    color: #333;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #2C3E50; /* Cor escura para o título */
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #5D6D7E; /* Cor suave para o texto */
+}
+
+.diferenciais {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.diferencial {
+    background-color: #34495E; /* Cor mais escura para os cards */
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.diferencial h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #F1C40F; /* Cor dourada para os títulos dos diferenciais */
+}
+
+.diferencial p {
+    font-size: 16px;
+    color: #BDC3C7; /* Cor suave para o texto */
+}
+
+
+/* Formulário de Contato */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+form button {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .banner h2 {
+        font-size: 36px;
+    }
+
+    .banner p {
+        font-size: 18px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .cta-buttons .btn-orcamento, .cta-buttons .btn-servicos {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+
+/* Responsividade para telas de dispositivos móveis muito pequenos */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .banner {
+        padding: 60px 20px;
+    }
+
+    .servico, .item-portifolio {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    form input, form textarea {
+        padding: 12px;
+    }
+
+    form button {
+        padding: 12px 25px;
+    }
+}
