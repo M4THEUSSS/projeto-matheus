@@ -3,37 +3,77 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
+
+   
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
 /* Estilo do cabeçalho com imagem de fundo */
 .header-banner {
-    background: url('path-to-your-image.jpg') no-repeat center center/cover; /* Substitua pelo caminho correto da imagem */
-    color: #ac5624;
-    padding: 100px 20px;
-    text-align: center;
-    position: relative;
+    display: flex;
+    background-image: url('/images/banner.1.png') ;
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat:  no-repeat; /* Evita que a imagem de fundo seja repetida ao longo do elemento */
+    background-size: cover;  /* Ajusta para cobrir todo o contêiner */
+    height: 90vh; /* Altere o valor para aumentar a altura */
+    width: 100%; /* Mantém a largura ocupando toda a tela */
+    position: relative; /* Necessário para pseudo-elemento */
+}
+.header-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Cria a sombra escura com transparência */
+    z-index: 1; /* Garante que esteja acima da imagem */
+  }
+
+  .container {
+    display: flex; /* Necessário para que align-items funcione */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    height: 40vh; /* Define uma altura, se necessário */
+    width: 80%; /* Ajusta a largura, se necessário */
+}
+  /* Estilo do h1  */
+  #Titulo {
+    display: flex ;
+    margin: 15%;
+    position:  relative; /* Garante que esteja acima do pseudo-elemento */
+    background: linear-gradient(to right, #ffff, #a8a4a1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 80px; /* Reduz levemente o tamanho para balancear */
+    font-family: 'Poppins', sans-serif; /* Adiciona uma fonte estilosa e moderna */
+    z-index: 2; /* Coloca o h1 acima da sombra */
 }
 
-.header-banner h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
 
 .cta-buttons {
-    margin-top: 20px;
+    position: relative; /* Permite o uso de deslocamento */
+    top: 400px; /* Move a seção para baixo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+  
 }
 
 .cta-buttons .btn-orcamento, .cta-buttons .btn-servicos {
-    background-color: #83712a; /* Cor dourada */
+    background-color: #c97d26; /* Cor dourada */
     color: #fff;
     padding: 15px 30px;
-    border-radius: 5px;
+    border-radius: 60%;
     text-decoration: none;
     font-weight: bold;
     margin: 10px;
