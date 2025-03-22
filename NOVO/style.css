@@ -7,6 +7,7 @@ body {
 :root {
     --branco-gelo: #F0F8FF; /* Definindo a variável */
     --Laranja: #ca6b1d;
+    --blackSombra: rgba(0, 0, 0, 0.6);
 }
 
 /* Fundo da imagem com sombra */
@@ -180,4 +181,54 @@ nav .menu li a:hover {
 .btn-servicos:hover {
     background-color: var(--Laranja); /* Fundo laranja ao passar o mouse */
     color: var(--branco-gelo); /* Texto branco para contraste */
+}
+
+.secao1 {
+    display: flex; /* Torna o contêiner principal flexível */
+    flex-direction: column; /* Organiza os elementos principais (títulos, parágrafos, etc.) verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    height: auto; /* Ajusta a altura automaticamente */
+    width: 100%; /* Ocupa toda a largura */
+    background-color: var(--Laranja); /* Cor de fundo */
+    padding: 20px; /* Espaçamento interno */
+}
+.secaoP {
+    display: flex; /* Torna o contêiner principal flexível */
+    flex-direction: column; /* Organiza os elementos principais (títulos, parágrafos, etc.) verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    font-size:200%;
+    color: var(--branco-gelo)
+
+}
+
+.cards {
+    display: flex; /* Torna os elementos internos flexíveis */
+    justify-content: center; /* Centraliza os cartões horizontalmente */
+    gap: 20px; /* Adiciona espaçamento entre os cartões */
+    flex-wrap: wrap; /* Permite que os cartões quebrem para outra linha se o espaço não for suficiente */
+    margin-top: 20px; /* Adiciona espaçamento em relação ao conteúdo superior */
+    gap: 350px;
+}
+
+.card {
+    background-color: white; /* Fundo dos cartões */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar os cartões */
+    padding: 20px; /* Espaçamento interno */
+    width: 300px; /* Largura dos cartões */
+    text-align: center; /* Centraliza o texto */
+ 
+}
+
+.card h3 {
+    font-size: 20px; /* Tamanho do título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.card p {
+    font-size: 16px; /* Tamanho do texto */
+    color: #555; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
 }
