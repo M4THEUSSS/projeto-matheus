@@ -44,9 +44,10 @@ body {
     width: 80%; /* Ajusta a largura, se necessário */
 }
   /* Estilo do h1  */
-  #Titulo {
+  nav {
     display: flex ;
-    margin: 15%;
+    margin: 60%;
+    background-color: #0073e6;
     position:  relative; /* Garante que esteja acima do pseudo-elemento */
     background: linear-gradient(to right, #ffff, #a8a4a1);
     -webkit-background-clip: text;

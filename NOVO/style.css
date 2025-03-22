@@ -1,0 +1,183 @@
+/* Estilo do Body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --branco-gelo: #F0F8FF; /* Definindo a variável */
+    --Laranja: #ca6b1d;
+}
+
+/* Fundo da imagem com sombra */
+.header-banner {
+    background-image: url(/images/banner.1.png); /* Substitua pelo caminho da sua imagem */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat:  no-repeat; /* Evita que a imagem de fundo seja repetida ao longo do elemento */
+    background-size: cover;  /* Ajusta para cobrir todo o contêiner */
+    height: 90vh; /* Altere o valor para aumentar a altura */
+    width: 100%; /* Mantém a largura ocupando toda a tela */
+    position: relative; /* Necessário para pseudo-elemento */
+}
+
+/* Sombra escura na imagem */
+.header-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Cria a sombra escura com transparência */
+    z-index: 1; /* Garante que esteja acima da imagem */
+  }
+
+/* Navegação */
+nav .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 50px;
+    position: relative;
+    z-index: 2; /* Coloca acima da sombra */
+    background-color: rgba(18, 18, 18, 0.611);
+}
+
+nav .menu {
+    display: flex; /* Torna os itens flexíveis */
+    justify-content: flex-end ; /* Alinha o menu à direita */
+    padding: 30px 100px;
+    
+}
+
+nav .menu li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px; /* Aumenta o tamanho da fonte */
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: color 0.3s ease; /* Altera a transição para a cor do texto */
+
+    /* Gradiente no texto */
+    background: linear-gradient(to right, #fafafa, #bcbbba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Sombra no texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Ajuste da sombra */
+    
+    /* Fonte estilosa */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Alteração de cor ao passar o mouse */
+nav .menu li a:hover {
+    -webkit-text-fill-color: rgb(18, 18, 18); /* Altera a cor do texto ao passar o mouse */
+    text-shadow: 2px 2px 5px var(--Laranja); /* Sombra ao passar o mouse */
+}
+
+
+/* Centralizar o conteúdo */
+    .Titulo {
+        text-align: left;
+        position: absolute;
+        top: 36%; /* Eleva o título mais alto */
+        left: 20%; /* Move o título mais à esquerda */
+        transform: translate(-50%, -50%);
+        color: var(--branco-gelo);
+        z-index: 2; /* Coloca acima da sombra */
+        background-color: rgba(18, 18, 18, 0.611);
+        width: calc(60vw - 20%);
+        /* Adicionando sombra ao elemento */
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9); /* Sombra escura ao redor */
+
+     
+        /* Borda arredondada e reta no lado esquerdo */
+        border-top-right-radius: 30px; /* Arredonda o canto superior direito */
+        border-top-left-radius: 0%; /* Mantém reta no lado esquerdo */
+        
+    }
+
+
+/* Estilo do H1 */
+.Titulo h1 {
+    left: 10%; /* Move o título mais à esquerda */
+    font-size: 60px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Efeito de sombra no texto */
+    position:  relative; /* Garante que esteja acima do pseudo-elemento */
+    color: #F0F8FF;
+    font-size: 80px; /* Reduz levemente o tamanho para balancear */
+    font-family: 'Poppins', sans-serif; /* Adiciona uma fonte estilosa e moderna */
+    z-index: 2; /* Coloca o h1 acima da sombra */
+}
+
+
+/* Estilo do H2 */
+.Titulo h2 {
+    margin-left: 10%; /* Alinha o H2 com o H1 */
+    font-size: 30px;
+    margin-top: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra menor */
+    background: linear-gradient(to right, #fafafa, #bcbbba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#buttons {
+    display: flex; /* Coloca os botões em linha ou coluna */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Centraliza verticalmente dentro do contêiner */
+    gap: 50px; /* Adiciona distância entre os botões */
+    position: absolute; /* Para posicionamento customizado */
+    bottom: 50px; /* Posiciona na parte de baixo da página */
+    left: 50%; /* Centraliza horizontalmente */
+    z-index: 5;
+    transform: translateX(-60%); /* Ajusta para alinhar ao centro */
+    bottom: 200px
+}
+
+
+
+/* Botão Laranja */
+.btn-orcamento {
+    
+    background-color: var(--Laranja); /* Cor de fundo padrão */
+    font-size: 30px; /* Tamanho maior para o texto */
+    padding: 25px 45px; /* Aumenta a área interna do botão */
+    border: none; /* Remove borda padrão */
+    border-radius: 15px; /* Bordas mais arredondadas */
+    color: var(--branco-gelo); /* Cor do texto */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição suave para o efeito */
+    text-decoration: none;
+    
+}
+
+.btn-orcamento:hover {
+    background-color: transparent; /* Fica transparente ao passar o mouse */
+    color: var(--branco-gelo); /* Altera a cor do texto para combinar com o fundo original */
+    border: 2px solid var(--branco-gelo); /* Adiciona uma borda laranja para efeito */
+}
+
+/* Botão Transparente */
+.btn-servicos {
+    
+    background-color: transparent; /* Fundo transparente padrão */
+    font-size: 30px; /* Tamanho maior para o texto */
+    padding: 25px 45px; /* Aumenta a área interna do botão */
+    border: 2px solid var(--branco-gelo); /* Borda laranja */
+    border-radius: 15px; /* Bordas arredondadas */
+    color: var(--branco-gelo); /* Cor inicial do texto */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição suave para o efeito */
+    text-decoration: none;
+    
+}
+
+.btn-servicos:hover {
+    background-color: var(--Laranja); /* Fundo laranja ao passar o mouse */
+    color: var(--branco-gelo); /* Texto branco para contraste */
+}
