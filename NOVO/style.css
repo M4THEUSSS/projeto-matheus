@@ -8,6 +8,8 @@ body {
     --branco-gelo: #F0F8FF; /* Definindo a variável */
     --Laranja: #ca6b1d;
     --blackSombra: rgba(0, 0, 0, 0.6);
+    --cinzaFundo: #4B4B4B;
+    --Letra: font-family: 'Poppins', sans-serif;
 }
 
 /* Fundo da imagem com sombra */
@@ -184,23 +186,44 @@ nav .menu li a:hover {
 }
 
 .secao1 {
+   
     display: flex; /* Torna o contêiner principal flexível */
     flex-direction: column; /* Organiza os elementos principais (títulos, parágrafos, etc.) verticalmente */
     align-items: center; /* Centraliza os elementos horizontalmente */
     justify-content: center; /* Centraliza os elementos verticalmente */
     height: auto; /* Ajusta a altura automaticamente */
     width: 100%; /* Ocupa toda a largura */
-    background-color: var(--Laranja); /* Cor de fundo */
-    padding: 20px; /* Espaçamento interno */
+    background-color: rgba(0, 0, 0, 0.932); /* Cor de fundo */
+    
 }
+.secaoP h2 {
+    font-size: 3rem; /* Aumenta o tamanho da fonte */
+    font-family: "Arial Black", sans-serif; /* Adiciona uma fonte de destaque */
+    color: var(--branco-gelo); /* Garante boa visibilidade */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 2;
+        transform: translateY(1);
+    }
+}
+
+
 .secaoP {
     display: flex; /* Torna o contêiner principal flexível */
     flex-direction: column; /* Organiza os elementos principais (títulos, parágrafos, etc.) verticalmente */
     align-items: center; /* Centraliza os elementos horizontalmente */
     justify-content: center; /* Centraliza os elementos verticalmente */
-    font-size:200%;
-    color: var(--branco-gelo)
-
+    color: var(--branco-gelo);
+    font-size: 200%;
+    width: 100%; /* Ocupa toda a largura */
 }
 
 .cards {
@@ -210,25 +233,60 @@ nav .menu li a:hover {
     flex-wrap: wrap; /* Permite que os cartões quebrem para outra linha se o espaço não for suficiente */
     margin-top: 20px; /* Adiciona espaçamento em relação ao conteúdo superior */
     gap: 350px;
+    margin-top: 120px; /* Adiciona espaçamento acima das imagens */
 }
 
 .card {
-    background-color: white; /* Fundo dos cartões */
+    background-color: var(--blackSombra); /* Fundo dos cartões */
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar os cartões */
     padding: 20px; /* Espaçamento interno */
-    width: 300px; /* Largura dos cartões */
+    width: 550px; /* Largura dos cartões */
     text-align: center; /* Centraliza o texto */
+    position: relative;
+    overflow: hidden;
  
 }
 
 .card h3 {
-    font-size: 20px; /* Tamanho do título */
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    font-size: 2rem; /* Tamanho do título */
+    font-family: "Poppins", sans-serif; /* Escolha uma fonte estilosa */
+    color: var(--branco-gelo); /* Mantém o contraste claro */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adiciona destaque ao texto */
+    margin-top: 15px; /* Espaçamento superior */
 }
 
 .card p {
-    font-size: 16px; /* Tamanho do texto */
-    color: #555; /* Cor do texto */
+    font-size: 1.5rem; /* Tamanho do texto */
     text-align: center; /* Centraliza o texto */
+    font-family: "Open Sans", sans-serif; /* Escolha uma fonte de leitura fácil */
+    color: rgba(255, 255, 255, 0.85); /* Torna o texto um pouco translúcido para suavidade */
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas para facilitar a leitura */
+    margin-top: 10px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Adiciona leve destaque ao texto */
+}
+.card h3, .card p {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente escuro */
+    padding: 10px; /* Espaçamento interno para o texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: inline-block; /* Faz o fundo seguir o tamanho do texto */
+}
+.card img{
+    align-items: center;
+    width: 550px ; /* Define a largura das imagens */
+    height: 450px; /* Mantém a proporção da imagem */
+    display: block; /* Faz com que a imagem se comporte como bloco para centralizar */
+    margin: 50px auto; /* Centraliza horizontalmente e define uma margem de 50px em cima e embaixo */
+    padding: 0; /* Remove qualquer preenchimento indesejado */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+/* Efeito ao passar o mouse */
+.card:hover img {
+    transform: scale(1.1); /* Aumenta a imagem */
+    filter: brightness(1); /* Ajusta o brilho */
+}
+
+/* Escurece as imagens que não estão sendo *hovered* */
+.cards:hover .card:not(:hover) img {
+    filter: brightness(0.5);
 }
