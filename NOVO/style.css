@@ -1,6 +1,7 @@
 /* Estilo do Body */
 body {
     margin: 0;
+    padding: 0; /* Remove qualquer preenchimento no body */
     font-family: Arial, sans-serif;
 }
 
@@ -273,6 +274,7 @@ nav .menu li a:hover {
 }
 .card img{
     align-items: center;
+    border-radius: 12px 12px 0 0; /* Arredonda apenas as duas bordas superiores */
     width: 550px ; /* Define a largura das imagens */
     height: 450px; /* Mantém a proporção da imagem */
     display: block; /* Faz com que a imagem se comporte como bloco para centralizar */
@@ -289,4 +291,102 @@ nav .menu li a:hover {
 /* Escurece as imagens que não estão sendo *hovered* */
 .cards:hover .card:not(:hover) img {
     filter: brightness(0.5);
+}
+
+
+.container {
+    display: flex; /* Necessário para que align-items funcione */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    height: 40vh; /* Define uma altura, se necessário */
+    width: 80%; /* Ajusta a largura, se necessário */
+}
+
+/* Secção Eletrica */
+.secao2 {
+    position: relative; /* Permite posicionar elementos dentro da seção */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #2b2bcc; /* Cor de fundo suave */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+.containerBloco h2 {
+    font-size: 2rem; /* Tamanho do título */
+    font-family: "Poppins", sans-serif; /* Escolha uma fonte estilosa */
+    color: var(--branco-gelo); /* Mantém o contraste claro */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adiciona destaque ao texto */
+    margin-top: 15px; /* Espaçamento superior */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+.containerBloco {
+    display: flex;
+    align-items: center; /* Alinha os blocos e a imagem no topo */
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    background-color: #7f14a0;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    flex-direction: column;
+}
+
+/* Estilo dos Blocos */
+.BlocoEletrica {
+    width: 60%; /* Define a largura da área dos blocos */
+    display: flex;
+    flex-direction: column; /* Coloca os blocos um abaixo do outro */
+    gap: 20px; /* Espaçamento vertical entre os blocos */
+}
+
+.bloco {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Largura de cada bloco */
+}
+
+.bloco1, .bloco3 {
+    align-self: flex-start; /* Posiciona à esquerda */
+    background-color: #ca6b1d;
+    text-align: left; /* Alinhamento à esquerda */
+}
+
+.bloco2, .bloco4 {
+    align-self: flex-end; /* Posiciona à direita */
+    background-color: antiquewhite;
+    text-align: right; /* Alinhamento à direita */
+}
+
+/* Estilo da Imagem */
+.image-containerBloco {
+    width: 30%; /* Define a largura da imagem em relação ao container */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente no container */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.image-containerBloco img {
+    width: 100%;
+    height: auto; /* Garante que a imagem mantenha a proporção */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
