@@ -320,73 +320,197 @@ nav .menu li a:hover {
 
 
 
-/* -----------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------------- */
 
 
 
 
 
 
+/* Estilo para o contêiner principal */
+.ConteinerBloco {
+    display: flex; /* Alinha os blocos ao lado um do outro */
+    justify-content: space-between; /* Garante espaço entre os blocos esquerdo e direito */
+    align-items: flex-start; /* Alinha os itens ao topo */
 
-
-.containerBloco h2 {
-    font-size: 2rem; /* Tamanho do título */
-    font-family: "Poppins", sans-serif; /* Escolha uma fonte estilosa */
-    color: var(--branco-gelo); /* Mantém o contraste claro */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adiciona destaque ao texto */
-    margin-top: 15px; /* Espaçamento superior */
-    text-align: center; /* Centraliza o texto horizontalmente */
-}
-.containerBloco {
-    display: flex;
-    align-items: center; /* Alinha os blocos e a imagem no topo */
-    width: 90%;
-    margin: auto;
-    padding: 20px 0;
-    background-color: #7f14a0;
-    text-align: center; /* Centraliza o texto horizontalmente */
-    flex-direction: column;
-}
-
-/* Estilo dos Blocos */
-.BlocoEletrica {
-    width: 60%; /* Define a largura da área dos blocos */
-    display: flex;
-    flex-direction: column; /* Coloca os blocos um abaixo do outro */
-    gap: 20px; /* Espaçamento vertical entre os blocos */
+    width: 100%; /* Ocupa toda a largura da página */
+    height: 65vh; /* Ocupa toda a altura da janela */
+    margin: 0; /* Remove margens externas */
+    gap: 20px; /* Espaçamento entre os blocos */
+    
+    background-image: url(/images/img-fundo\ eletrica.jpg); /* Caminho correto da imagem */
+    background-size: cover; /* Faz a imagem preencher todo o contêiner */
+    background-position: center; /* Centraliza a imagem no contêiner */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    position: relative; /* Necessário para o pseudo-elemento */
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Adiciona sombra interna ao fundo */
+    position: relative; /* Necessário para elementos posicionados dentro do contêiner */
 }
 
-.bloco {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Largura de cada bloco */
-}
-
-.bloco1, .bloco3 {
-    align-self: flex-start; /* Posiciona à esquerda */
-    background-color: #ca6b1d;
-    text-align: left; /* Alinhamento à esquerda */
-}
-
-.bloco2, .bloco4 {
-    align-self: flex-end; /* Posiciona à direita */
-    background-color: antiquewhite;
-    text-align: right; /* Alinhamento à direita */
-}
-
-/* Estilo da Imagem */
-.image-containerBloco {
-    width: 30%; /* Define a largura da imagem em relação ao container */
-    display: flex;
-    justify-content: center; /* Centraliza a imagem horizontalmente no container */
-    align-items: center; /* Centraliza verticalmente */
-}
-
-.image-containerBloco img {
+/* Adiciona a sombra sobre a imagem de fundo */
+.ConteinerBloco::after {
+    content: ""; /* Adiciona o pseudo-elemento */
+    position: absolute; /* Posiciona-o sobre o contêiner */
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto; /* Garante que a imagem mantenha a proporção */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sombra escura semi-transparente */
+    z-index: 1; /* Certifica-se de que o pseudo-elemento fique acima da imagem */
+    pointer-events: none; /* Garante que o pseudo-elemento não interfira na interação */
+}
+
+/* Para o conteúdo dentro do ConteinerBloco */
+.ConteinerBloco > * {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo esteja acima da sombra */
+}
+
+/* Estilo para o BlocoEsquerdo */
+.BlocoEsquerdo {
+    display: flex;
+    flex-direction: column; /* Posiciona os blocos 1 a 4 verticalmente */
+    gap: 15px; /* Espaçamento entre os blocos */
+    
+}
+
+
+.BlocoEsquerdo h3 {
+    font-family: var(--Letra);/* Fonte moderna e estilosa */
+    font-size: 1.8rem; /* Tamanho do texto */
+    color: var(--Laranja); /* Cor em destaque para o título */
+    text-transform: uppercase; /* Deixa o texto todo em maiúsculas */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+    letter-spacing: 1px; /* Dá um espaçamento elegante entre as letras */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Adiciona um efeito de sombra leve */
+}
+
+/* Estilo para o parágrafo <p> */
+.BlocoEsquerdo p {
+    font-family: "Arial", sans-serif; /* Fonte clara e limpa para leitura */
+    font-size: 15px; /* Tamanho confortável para leitura */
+    color: var(--branco-gelo); /* Cor escura para contraste */
+    line-height: 1.8; /* Espaçamento entre as linhas para melhorar a leitura */
+    margin-bottom: 15px; /* Espaçamento abaixo do parágrafo */
+    text-align: justify; /* Justifica o texto para alinhamento bonito */
+}
+
+/* Estilo individual dos blocos (bloco1, bloco2, etc.) */
+.BlocoEsquerdo .bloco1, 
+.BlocoEsquerdo .bloco2, 
+.BlocoEsquerdo .bloco3, 
+.BlocoEsquerdo .bloco4 {
+    margin-top: 5%;
+    background-color: var(--blackSombra);
+    padding: 50px;
+    border-radius: 0px 30px 0px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    width: 80%; /* O bloco ocupa toda a largura disponível */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação para interação */
+
+}
+/* Efeito ao passar o mouse nos blocos */
+.BlocoEsquerdo .bloco1:hover, 
+.BlocoEsquerdo .bloco2:hover, 
+.BlocoEsquerdo .bloco3:hover, 
+.BlocoEsquerdo .bloco4:hover {
+    transform: translateY(-5px); /* Eleva levemente o bloco */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais pronunciada */
+}
+
+
+
+
+/* Estilo para o BlocoDireito */
+.BlocoDireito {
+    flex: 1; /* Faz o BlocoDireito ocupar espaço proporcional */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    position: relative; /* Necessário para o pseudo-elemento */
+}
+
+/* Estilo para as imagens no BlocoDireito */
+.img-BlocoDireito {
+    display: flex; /* Alinha as imagens lado a lado */
+    gap: 100px; /* Espaçamento entre as imagens */
+    flex-wrap: wrap; /* Permite quebrar para a próxima linha se o espaço for insuficiente */
+}
+
+
+.img-BlocoDireito .image1 img,
+.img-BlocoDireito .image2 img,
+.img-BlocoDireito .image3 img {
+    width: 400px; /* Define uma largura fixa */
+    height: 850px; /* Define uma altura fixa */
+    object-fit: cover; /* Faz com que a imagem se ajuste ao tamanho sem distorcer */
+    border-radius: 8px; /* Mantém as bordas arredondadas */
+   
+    margin: 20px auto; /* Centraliza e adiciona espaço ao redor */
+    display: block; /* Garante que a imagem seja exibida como bloco */
+    align-items: center;
+    margin-top: 150px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra inicial */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+/* Efeito ao passar o mouse */
+.img-BlocoDireito .image1 img:hover,
+.img-BlocoDireito .image2 img:hover,
+.img-BlocoDireito .image3 img:hover {
+    transform: scale(1.1); /* Faz a imagem crescer levemente */
+    box-shadow: 0 15px 30px var(--blackSombra); /* Adiciona uma sombra mais intensa */
+}
+/* Sombra escura exclusiva para as imagens no hover */
+.img-BlocoDireito .image1 img:hover::after,
+.img-BlocoDireito .image2 img:hover::after,
+.img-BlocoDireito .image3 img:hover::after {
+    content: ""; /* Cria a camada extra */
+    position: absolute; /* Posiciona sobre a imagem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Camada escura semi-transparente */
+    border-radius: 8px; /* Respeita o mesmo arredondamento da imagem */
+    z-index: 1; /* Camada superior à imagem */
+    pointer-events: none; /* Impede interação com o pseudo-elemento */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.projetos-portifolio {
+    margin-top: 50%;
 }
