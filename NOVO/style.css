@@ -11,6 +11,7 @@ body {
     --blackSombra: rgba(0, 0, 0, 0.6);
     --cinzaFundo: #4B4B4B;
     --Letra: font-family: 'Poppins', sans-serif;
+    --GrafiteFundo: #2c2c2c;
 }
 
 /* Fundo da imagem com sombra */
@@ -239,7 +240,7 @@ nav .menu li a:hover {
 
 .card {
     background-color: var(--blackSombra); /* Fundo dos cartões */
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 50px; /* Bordas arredondadas */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar os cartões */
     padding: 20px; /* Espaçamento interno */
     width: 550px; /* Largura dos cartões */
@@ -252,7 +253,7 @@ nav .menu li a:hover {
 .card h3 {
     font-size: 2rem; /* Tamanho do título */
     font-family: "Poppins", sans-serif; /* Escolha uma fonte estilosa */
-    color: var(--branco-gelo); /* Mantém o contraste claro */
+    color: var(--Laranja); /* Mantém o contraste claro */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adiciona destaque ao texto */
     margin-top: 15px; /* Espaçamento superior */
 }
@@ -334,7 +335,7 @@ nav .menu li a:hover {
     align-items: flex-start; /* Alinha os itens ao topo */
 
     width: 100%; /* Ocupa toda a largura da página */
-    height: 65vh; /* Ocupa toda a altura da janela */
+    height: 100vh; /* Ocupa toda a altura da janela */
     margin: 0; /* Remove margens externas */
     gap: 20px; /* Espaçamento entre os blocos */
     
@@ -388,10 +389,10 @@ nav .menu li a:hover {
 /* Estilo para o parágrafo <p> */
 .BlocoEsquerdo p {
     font-family: "Arial", sans-serif; /* Fonte clara e limpa para leitura */
-    font-size: 15px; /* Tamanho confortável para leitura */
+    font-size: 1.5rem; /* Tamanho do texto */
     color: var(--branco-gelo); /* Cor escura para contraste */
     line-height: 1.8; /* Espaçamento entre as linhas para melhorar a leitura */
-    margin-bottom: 15px; /* Espaçamento abaixo do parágrafo */
+    margin-bottom: 10px; /* Espaçamento abaixo do parágrafo */
     text-align: justify; /* Justifica o texto para alinhamento bonito */
 }
 
@@ -400,7 +401,7 @@ nav .menu li a:hover {
 .BlocoEsquerdo .bloco2, 
 .BlocoEsquerdo .bloco3, 
 .BlocoEsquerdo .bloco4 {
-    margin-top: 5%;
+    margin-top: 4%;
     background-color: var(--blackSombra);
     padding: 50px;
     border-radius: 0px 30px 0px 30px;
@@ -442,14 +443,14 @@ nav .menu li a:hover {
 .img-BlocoDireito .image2 img,
 .img-BlocoDireito .image3 img {
     width: 400px; /* Define uma largura fixa */
-    height: 850px; /* Define uma altura fixa */
+    height: 950px; /* Define uma altura fixa */
     object-fit: cover; /* Faz com que a imagem se ajuste ao tamanho sem distorcer */
     border-radius: 8px; /* Mantém as bordas arredondadas */
    
     margin: 20px auto; /* Centraliza e adiciona espaço ao redor */
     display: block; /* Garante que a imagem seja exibida como bloco */
     align-items: center;
-    margin-top: 150px;
+    margin-top: 250px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra inicial */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
 }
@@ -477,40 +478,121 @@ nav .menu li a:hover {
 }
 
 
+/*                           ---------------------------------                            */
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Estilo para a seção de Projetos e Portfólio */
 .projetos-portifolio {
-    margin-top: 50%;
+    background-color: var(--GrafiteFundo); /* Cor de fundo escura */
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    padding: 200px 20px;
+
+}
+
+
+.projetos-portifolio h2 {  
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--Laranja); /* Cor dourada para o título */
+}
+
+.projetos-portifolio p {
+    font-size: 30px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    color: var(--branco-gelo); /* Cor suave para o texto */
+}
+.cardsN2 {
+    display: flex;
+    justify-content: center; /* Centraliza os cards na página */
+    gap: 50px;
+    margin-bottom: 150px;
+}
+
+.card2 {
+    text-align: right; /* Centraliza o conteúdo no card */
+    padding: 30px 75px;
+    background-color: rgba(18, 18, 18, 0.611); /* Cor de fundo do card */
+    width: calc(50vw - 20%);  /* Adicionando sombra ao elemento */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Animação ao passar o cursor */
+}
+.card2 img {
+    width: 90px; /* Ajuste o tamanho do ícone */
+    height: 100px; /* Tamanho fixo para garantir a forma redonda */
+    border: 5px solid black; /* Define a borda na cor laranja */
+    border-radius: 20%; /* Torna a borda redonda */
+    padding: 15px; /* Espaçamento interno para ajuste */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona um leve sombreamento */
+    transition: transform 0.3s ease; /* Animação para efeitos */
+}
+
+.card2 img:hover {
+    transform: rotate(360deg) scale(1.1); /* Gira e aumenta ao passar o cursor */
+}
+
+
+/* Efeito ao passar o cursor sobre todo o card */
+.card2:hover {
+    transform: scale(1.05); /* Leve aumento no tamanho do card */
+}
+
+
+
+.card2 h3 {
+    font-size: 30px; /* Mantém o destaque */
+    font-weight: 600; /* Texto robusto */
+    color: var(--Laranja); /* Cor dourada */
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-align: left; /* Garante alinhamento ao lado esquerdo */ 
+    margin-bottom: 0px; /* Diminui o espaço entre h3 e p */
+
+}
+
+
+
+
+.card2 p {
+    font-size: 22px; /* Ajuste para manter equilíbrio com o título */
+    line-height: 1.3; /* Melhora a legibilidade do texto */
+    color: var(--branco-gelo); /* Mantém a cor suave */
+    text-align: left; /* Garante alinhamento ao lado esquerdo */
+    margin-top: 15px; 
+}
+
+
+
+/* Ajustando os estilos para portfolio */
+
+
+.portfolio-img {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linhas em telas menores */
+    gap: 35px;
+    justify-content: center; /* Centraliza os elementos */
+    transition: transform 0.35s ease; /* Efeito suave */
+}
+
+.portfolio-img img {
+    transition: transform 0.35s ease, opacity 0.35s ease; /* Transição de escala e opacidade */
+    cursor: pointer; /* Indica que é interativo */
+}
+
+.portfolio-img img:hover {
+    transform: scale(1.3); /* Aumenta a imagem ao passar o cursor */
+}
+
+.portfolio-img img:not(:hover) {
+    opacity: 0.4; /* Reduz a opacidade dos outros ícones */
+    transform: scale(1); /* Mantém o tamanho normal */
 }
