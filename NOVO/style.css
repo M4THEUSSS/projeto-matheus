@@ -16,7 +16,7 @@ body {
 
 /* Fundo da imagem com sombra */
 .header-banner {
-    background-image: url(/images/banner.1.png); /* Substitua pelo caminho da sua imagem */
+    background-image: url(/projeto-matheus/images/banner.1.png); /* Substitua pelo caminho da sua imagem */
     background-position: center center; /* Centraliza a imagem */
     background-repeat:  no-repeat; /* Evita que a imagem de fundo seja repetida ao longo do elemento */
     background-size: cover;  /* Ajusta para cobrir todo o contêiner */
@@ -38,6 +38,15 @@ body {
   }
 
 /* Navegação */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: relative;
+    z-index: 2; /* Coloca acima da sombra */
+    background-color: rgba(0, 0, 0, 0.897);
+}
 nav .menu {
     list-style: none;
     margin: 0;
@@ -46,15 +55,24 @@ nav .menu {
     justify-content: center;
     gap: 20px;
     font-size: 50px;
-    position: relative;
-    z-index: 2; /* Coloca acima da sombra */
-    background-color: rgba(18, 18, 18, 0.611);
+ 
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 30px; /* Espaçamento à esquerda, ajuste como quiser */
+    
 }
 
+nav .logo img {
+    height: 120px; /* Ajuste a altura conforme necessário */
+    width: auto;
+    object-fit: contain;
+}
 nav .menu {
     display: flex; /* Torna os itens flexíveis */
     justify-content: flex-end ; /* Alinha o menu à direita */
-    padding: 30px 100px;
+    padding: 40px 100px;
     
 }
 
@@ -339,7 +357,7 @@ nav .menu li a:hover {
     margin: 0; /* Remove margens externas */
     gap: 20px; /* Espaçamento entre os blocos */
     
-    background-image: url(/images/img-fundo\ eletrica.jpg); /* Caminho correto da imagem */
+    background-image: url(/projeto-matheus/images/img-fundo\ eletrica.jpg); /* Caminho correto da imagem */
     background-size: cover; /* Faz a imagem preencher todo o contêiner */
     background-position: center; /* Centraliza a imagem no contêiner */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
