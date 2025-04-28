@@ -14,7 +14,157 @@ body {
     --GrafiteFundo: #2c2c2c;
 }
 
-/* Fundo da imagem com sombra */
+/* Navegação ------------------------------------------------------------------------*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8); /* Navbar com fundo escuro e semi-transparente */
+    transition: background-color 0.3s ease;
+  }
+  
+  nav:hover {
+    background-color: rgba(0, 0, 0, 1); /* Cor de fundo mais escura quando o mouse passa por cima */
+  }
+  
+  nav .logo img {
+    height: 60px; /* Logo ajustada para tamanho proporcional */
+    width: auto;
+    object-fit: contain;
+    margin-left: 16px;
+  }
+  
+  nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 2px; /* Diminuir o espaço entre os itens do menu. Ajuste conforme necessário */
+}
+
+nav .menu li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--branco-gelo);
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+/* Efeito de hover */
+nav .menu li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFA500; /* Cor laranja para o efeito da linha */
+    transition: width 0.3s ease;
+}
+
+/* Cor do fundo e da linha no hover */
+nav .menu li a:hover {
+    background-color: #FF5733; /* Cor de fundo mais quente para hover (vermelho-alaranjado) */
+    color:var(--branco-gelo);
+    transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+}
+
+/* Expansão da linha ao passar o mouse */
+nav .menu li a:hover::before {
+    width: 100%;
+}
+
+/* Cor do fundo quando pressionado */
+nav .menu li a:active {
+    background-color: #FF8C00; /* Tom mais escuro de laranja ao clicar */
+}
+
+  
+  /* -------------------------- TÍTULOS E SLOGAN ---------------------------- */
+  .Titulo h1 {
+    font-size: 55px;
+    margin: 10px 0;
+    font-weight: 700;
+  }
+  
+  .Titulo h2 {
+    font-size: 28px;
+    margin-top: 10px;
+    font-weight: 400;
+  }
+  
+  /* ---------------------------- BOTOES ---------------------------- */
+  #buttons a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 10px 15px;
+    background-color: #FFA500; /* Cor laranja original dos botões */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  
+  #buttons a:hover {
+    background-color: #FF8C00; /* Cor laranja mais escura no hover */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+  }
+  
+  #buttons a:active {
+    background-color: #FF7F00; /* Cor laranja ainda mais escura no clique */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Sombra no texto ao clicar */
+  }
+  
+  /* ---------------------------- RESPONSIVIDADE ---------------------------- */
+  
+  /* Menu responsivo */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    nav .menu {
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+  
+    nav .menu li a {
+      font-size: 22px;
+      padding: 12px;
+      text-align: center;
+    }
+  
+    .Titulo h1 {
+      font-size: 45px;
+    }
+  
+    .Titulo h2 {
+      font-size: 22px;
+    }
+  
+    #buttons {
+      flex-direction: column;
+    }
+  
+    #buttons a {
+      font-size: 16px;
+      padding: 10px 20px;
+      margin: 8px;
+    }
+  }
+
+
+/* Fundo da imagem com sombra  -----------------------------------------*/
 .header-banner {
     background-image: url(/projeto-matheus/images/banner.1.png); /* Substitua pelo caminho da sua imagem */
     background-position: center center; /* Centraliza a imagem */
@@ -33,74 +183,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Cria a sombra escura com transparência */
+    background-color: rgba(0, 0, 0, 0.7); /* Cria a sombra escura com transparência */
     z-index: 1; /* Garante que esteja acima da imagem */
   }
 
-/* Navegação */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 50px;
-    position: relative;
-    z-index: 2; /* Coloca acima da sombra */
-    background-color: rgba(0, 0, 0, 0.897);
-}
-nav .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-size: 50px;
- 
-}
-nav .logo {
-    display: flex;
-    align-items: center;
-    margin-left: 30px; /* Espaçamento à esquerda, ajuste como quiser */
-    
-}
 
-nav .logo img {
-    height: 120px; /* Ajuste a altura conforme necessário */
-    width: auto;
-    object-fit: contain;
-}
-nav .menu {
-    display: flex; /* Torna os itens flexíveis */
-    justify-content: flex-end ; /* Alinha o menu à direita */
-    padding: 40px 100px;
-    
-}
-
-nav .menu li a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 30px; /* Aumenta o tamanho da fonte */
-    padding: 10px 20px;
-    border-radius: 15px;
-    transition: color 0.3s ease; /* Altera a transição para a cor do texto */
-
-    /* Gradiente no texto */
-    background: linear-gradient(to right, #fafafa, #bcbbba);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    /* Sombra no texto */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Ajuste da sombra */
-    
-    /* Fonte estilosa */
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Alteração de cor ao passar o mouse */
-nav .menu li a:hover {
-    -webkit-text-fill-color: rgb(18, 18, 18); /* Altera a cor do texto ao passar o mouse */
-    text-shadow: 2px 2px 5px var(--Laranja); /* Sombra ao passar o mouse */
-}
 
 
 /* Centralizar o conteúdo */
@@ -234,6 +321,164 @@ nav .menu li a:hover {
         transform: translateY(1);
     }
 }
+
+/* 
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+*/
+
+.planejamento-container {
+    width: 100%;  /* Ocupa toda a largura da tela */
+    margin: auto;
+    padding: 60px 20px;
+    background-color: #000; /* fundo preto */
+  }
+  .titulo {
+    text-align: left;
+    margin-bottom: 65px; /* Distância entre o título e as etapas */
+  }
+  
+  .titulo h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--branco-gelo); /* Cor do título */
+    margin: 0;
+  }
+  
+  .linha {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px; /* Distância aumentada entre as etapas */
+    margin-bottom: 90px;
+  }
+  
+  .etapa {
+    background: #000; /* fundo das etapas preto */
+    border: 2px solid #ca6b1d; /* laranja padrão */
+    border-radius: 12px;
+    width: 24%;
+    padding: 25px 20px;
+    box-shadow: 0 4px 12px rgba(82, 80, 80, 0.6);
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Remover borda da etapa 1 e 8 */
+  .etapa.etapa-1,
+  .etapa.etapa-8 {
+    border: none;
+    
+  }
+  
+  .etapa h2 {
+    margin: 0 0 10px 0;
+    color: var(--Laranja); /* número laranja */
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .etapa h3 {
+    margin: 0 0 30px 0; /* Distância aumentada entre o título e o parágrafo */
+    font-size: 18px;
+    color: var(--Laranja); /* cinza claro */
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .etapa p {
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .linha2 {
+    position: relative;
+  }
+  
+
+/* 
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+*/
+
+  .sobre-empresa {
+    padding: 60px 40px;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .sobre-empresa h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+  }
+  
+  .conteudo-sobre {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  .imagem-sobre img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .texto-sobre {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+  }
+  
+  .texto-sobre p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .secaoP {
