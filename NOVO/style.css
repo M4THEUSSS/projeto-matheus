@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0; /* Remove qualquer preenchimento no body */
     font-family: Arial, sans-serif;
+    
 }
 
 :root {
@@ -20,6 +21,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: auto;
     position: fixed;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.8); /* Navbar com fundo escuro e semi-transparente */
@@ -31,7 +33,7 @@ nav {
   }
   
   nav .logo img {
-    height: 60px; /* Logo ajustada para tamanho proporcional */
+    height: 55px; /* Logo ajustada para tamanho proporcional */
     width: auto;
     object-fit: contain;
     margin-left: 16px;
@@ -170,7 +172,7 @@ nav .menu li a:active {
     background-position: center center; /* Centraliza a imagem */
     background-repeat:  no-repeat; /* Evita que a imagem de fundo seja repetida ao longo do elemento */
     background-size: cover;  /* Ajusta para cobrir todo o contêiner */
-    height: 90vh; /* Altere o valor para aumentar a altura */
+    height: 85vh; /* Altere o valor para aumentar a altura */
     width: 100%; /* Mantém a largura ocupando toda a tela */
     position: relative; /* Necessário para pseudo-elemento */
 }
@@ -194,7 +196,7 @@ nav .menu li a:active {
     .Titulo {
         text-align: left;
         position: absolute;
-        top: 36%; /* Eleva o título mais alto */
+        top: 50%; /* Eleva o título mais alto */
         left: 20%; /* Move o título mais à esquerda */
         transform: translate(-50%, -50%);
         color: var(--branco-gelo);
@@ -215,38 +217,40 @@ nav .menu li a:active {
 /* Estilo do H1 */
 .Titulo h1 {
     left: 10%; /* Move o título mais à esquerda */
-    font-size: 60px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Efeito de sombra no texto */
     position:  relative; /* Garante que esteja acima do pseudo-elemento */
-    color: #F0F8FF;
-    font-size: 80px; /* Reduz levemente o tamanho para balancear */
+    color:var(--branco-gelo);
+    font-size: 48px; /* Reduz levemente o tamanho para balancear */
     font-family: 'Poppins', sans-serif; /* Adiciona uma fonte estilosa e moderna */
     z-index: 2; /* Coloca o h1 acima da sombra */
 }
 
 
 /* Estilo do H2 */
-.Titulo h2 {
-    margin-left: 10%; /* Alinha o H2 com o H1 */
-    font-size: 30px;
+.Titulo h2 {  /* Correção: minúsculo para combinar com o HTML */
+    margin-left: 60px; /* Valor fixo ou use padding no container */
+    font-size: 20px;
     margin-top: 5px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra menor */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    
+    /* Gradiente no texto (ordem correta) */
     background: linear-gradient(to right, #fafafa, #bcbbba);
-    -webkit-background-clip: text;
+    background-clip: text; /* Propriedade padrão */
+    -webkit-background-clip: text; /* Versão para Safari/Chrome */
+    color: transparent; /* Fallback */
     -webkit-text-fill-color: transparent;
 }
 
 #buttons {
-    display: flex; /* Coloca os botões em linha ou coluna */
-    justify-content: center; /* Centraliza os botões horizontalmente */
-    align-items: center; /* Centraliza verticalmente dentro do contêiner */
-    gap: 50px; /* Adiciona distância entre os botões */
-    position: absolute; /* Para posicionamento customizado */
-    bottom: 50px; /* Posiciona na parte de baixo da página */
-    left: 50%; /* Centraliza horizontalmente */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 35px; /* Espaço entre os botões */
+    position: absolute; /* Permite posicionamento preciso */
+    left: 50%; /* Posiciona no meio horizontal */
+    transform: translateX(-50%); /* Ajusta para centralizar corretamente */
+    top: 470px; /* Distância do topo da página (ajuste este valor) */
     z-index: 5;
-    transform: translateX(-60%); /* Ajusta para alinhar ao centro */
-    bottom: 200px
 }
 
 
@@ -324,21 +328,22 @@ nav .menu li a:active {
 
 /* 
 
-
-////////////////////////////////////////////////////////////////////////////////
-
+/////////////////<!--Seção A Jornada do Projeto: Etapas e Processos -->//////////////////////
 
 */
 
 .planejamento-container {
-    width: 100%;  /* Ocupa toda a largura da tela */
-    margin: auto;
+    height: auto; /* Mudei para auto para se adaptar ao conteúdo */
+    min-height: 85vh; /* Mantém uma altura mínima */
+    width: 100%;
+    margin: 0 auto; /* Centraliza o container */
     padding: 60px 20px;
-    background-color: #000; /* fundo preto */
-  }
+    background-color:black;
+}
   .titulo {
     text-align: left;
     margin-bottom: 65px; /* Distância entre o título e as etapas */
+    
   }
   
   .titulo h1 {
@@ -346,25 +351,28 @@ nav .menu li a:active {
     font-weight: 700;
     color: var(--branco-gelo); /* Cor do título */
     margin: 0;
+    left: 50px;
+    margin-left: 75px;
   }
   
   .linha {
     display: flex;
-    justify-content: space-between;
-    gap: 60px; /* Distância aumentada entre as etapas */
-    margin-bottom: 90px;
-  }
+    justify-content: center; /* Centraliza as etapas */
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    gap: 30px; /* Reduzi o gap entre as etapas */
+    margin-bottom: 50px;
+}
   
-  .etapa {
-    background: #000; /* fundo das etapas preto */
-    border: 2px solid #ca6b1d; /* laranja padrão */
+.etapa {
+    background: #000;
+    border: 2px solid #ca6b1d;
     border-radius: 12px;
-    width: 24%;
+    width: 280px; /* Largura fixa para melhor controle */
     padding: 25px 20px;
     box-shadow: 0 4px 12px rgba(82, 80, 80, 0.6);
     position: relative;
     font-family: 'Poppins', sans-serif;
-  }
+}
   
   /* Remover borda da etapa 1 e 8 */
   .etapa.etapa-1,
@@ -398,464 +406,729 @@ nav .menu li a:active {
   
   .linha2 {
     position: relative;
+    
   }
   
-
 /* 
-
-
-////////////////////////////////////////////////////////////////////////////////
-
-
+/////////////////<!--FIM Seção A Jornada do Projeto: Etapas e Processos -->//////////////////////
 */
 
-  .sobre-empresa {
-    padding: 60px 40px;
-    background-color: #ffffff;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .sobre-empresa h2 {
+/* 
+////////////<!--Primeira Seção Por Que Escolher a Fanteck Engenharia? -->//////////////
+*/
+
+
+  .diferenciais {
+    background-color:black;
+    padding: 80px 20px;
     text-align: center;
-    font-size: 28px;
-    color: #2c3e50;
-    margin-bottom: 40px;
-  }
-  
-  .conteudo-sobre {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 40px;
-    justify-content: center;
-  }
-  
-  .imagem-sobre img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  .texto-sobre {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
-  }
-  
-  .texto-sobre p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.secaoP {
-    display: flex; /* Torna o contêiner principal flexível */
-    flex-direction: column; /* Organiza os elementos principais (títulos, parágrafos, etc.) verticalmente */
-    align-items: center; /* Centraliza os elementos horizontalmente */
-    justify-content: center; /* Centraliza os elementos verticalmente */
-    color: var(--branco-gelo);
-    font-size: 200%;
-    width: 100%; /* Ocupa toda a largura */
 }
-
-.cards {
-    display: flex; /* Torna os elementos internos flexíveis */
-    justify-content: center; /* Centraliza os cartões horizontalmente */
-    gap: 20px; /* Adiciona espaçamento entre os cartões */
-    flex-wrap: wrap; /* Permite que os cartões quebrem para outra linha se o espaço não for suficiente */
-    margin-top: 20px; /* Adiciona espaçamento em relação ao conteúdo superior */
-    gap: 350px;
-    margin-top: 120px; /* Adiciona espaçamento acima das imagens */
-}
-
-.card {
-    background-color: var(--blackSombra); /* Fundo dos cartões */
-    border-radius: 50px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar os cartões */
-    padding: 20px; /* Espaçamento interno */
-    width: 550px; /* Largura dos cartões */
-    text-align: center; /* Centraliza o texto */
-    position: relative;
-    overflow: hidden;
- 
-}
-
-.card h3 {
-    font-size: 2rem; /* Tamanho do título */
-    font-family: "Poppins", sans-serif; /* Escolha uma fonte estilosa */
-    color: var(--Laranja); /* Mantém o contraste claro */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adiciona destaque ao texto */
-    margin-top: 15px; /* Espaçamento superior */
-}
-
-.card p {
-    font-size: 1.5rem; /* Tamanho do texto */
-    text-align: center; /* Centraliza o texto */
-    font-family: "Open Sans", sans-serif; /* Escolha uma fonte de leitura fácil */
-    color: rgba(255, 255, 255, 0.85); /* Torna o texto um pouco translúcido para suavidade */
-    line-height: 1.8; /* Aumenta o espaçamento entre linhas para facilitar a leitura */
-    margin-top: 10px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Adiciona leve destaque ao texto */
-}
-.card h3, .card p {
-    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente escuro */
-    padding: 10px; /* Espaçamento interno para o texto */
-    border-radius: 5px; /* Bordas arredondadas */
-    display: inline-block; /* Faz o fundo seguir o tamanho do texto */
-}
-.card img{
-    align-items: center;
-    border-radius: 12px 12px 0 0; /* Arredonda apenas as duas bordas superiores */
-    width: 550px ; /* Define a largura das imagens */
-    height: 450px; /* Mantém a proporção da imagem */
-    display: block; /* Faz com que a imagem se comporte como bloco para centralizar */
-    margin: 50px auto; /* Centraliza horizontalmente e define uma margem de 50px em cima e embaixo */
-    padding: 0; /* Remove qualquer preenchimento indesejado */
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-/* Efeito ao passar o mouse */
-.card:hover img {
-    transform: scale(1.1); /* Aumenta a imagem */
-    filter: brightness(1); /* Ajusta o brilho */
-}
-
-/* Escurece as imagens que não estão sendo *hovered* */
-.cards:hover .card:not(:hover) img {
-    filter: brightness(0.5);
-}
-
 
 .container {
-    display: flex; /* Necessário para que align-items funcione */
-    flex-direction: column; /* Organiza os elementos verticalmente */
-    align-items: center; /* Centraliza os elementos horizontalmente */
-    justify-content: center; /* Centraliza os elementos verticalmente */
-    height: 40vh; /* Define uma altura, se necessário */
-    width: 80%; /* Ajusta a largura, se necessário */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Secção Eletrica */
-.secao2 {
-    position: relative; /* Permite posicionar elementos dentro da seção */
-    padding: 20px; /* Espaçamento interno */
-    background-color: #2b2bcc; /* Cor de fundo suave */
+.diferenciais h2 {
+    font-size: 2.5rem;
+    color: #f7931e;
+    margin-bottom: 20px;
+}
+
+.destaque {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.vantagens {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.vantagem {
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.vantagem:hover {
+    transform: translateY(-10px);
+}
+
+.vantagem img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.vantagem h3 {
+    color: #f7931e;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.vantagem p {
+    color: #d0d0d0;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 
+/* 
+////////////<!--Fim Seção Por Que Escolher a Fanteck Engenharia? -->//////////////
+*/
 
 
 
 
+/* 
+////////////<!--Secção Eletrica -->//////////////
+*/
 
-
-
-
-
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-
-
-
-
-
-
-/* Estilo para o contêiner principal */
+/* Container Principal */
 .ConteinerBloco {
-    display: flex; /* Alinha os blocos ao lado um do outro */
-    justify-content: space-between; /* Garante espaço entre os blocos esquerdo e direito */
-    align-items: flex-start; /* Alinha os itens ao topo */
-
-    width: 100%; /* Ocupa toda a largura da página */
-    height: 100vh; /* Ocupa toda a altura da janela */
-    margin: 0; /* Remove margens externas */
-    gap: 20px; /* Espaçamento entre os blocos */
-    
-    background-image: url(/projeto-matheus/images/img-fundo\ eletrica.jpg); /* Caminho correto da imagem */
-    background-size: cover; /* Faz a imagem preencher todo o contêiner */
-    background-position: center; /* Centraliza a imagem no contêiner */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    position: relative; /* Necessário para o pseudo-elemento */
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Adiciona sombra interna ao fundo */
-    position: relative; /* Necessário para elementos posicionados dentro do contêiner */
+    display: flex;
+    max-height: 62vh; /* <-- adiciona limite máximo */
+    overflow: auto;   /* <-- permite rolagem caso ultrapasse */
+    width: 100%;
+    padding: 40px 20px;
+    background-image: url(/projeto-matheus/images/img-fundo\ eletrica.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
 }
 
-/* Adiciona a sombra sobre a imagem de fundo */
 .ConteinerBloco::after {
-    content: ""; /* Adiciona o pseudo-elemento */
-    position: absolute; /* Posiciona-o sobre o contêiner */
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Sombra escura semi-transparente */
-    z-index: 1; /* Certifica-se de que o pseudo-elemento fique acima da imagem */
-    pointer-events: none; /* Garante que o pseudo-elemento não interfira na interação */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
-/* Para o conteúdo dentro do ConteinerBloco */
+/* Estrutura Principal */
 .ConteinerBloco > * {
     position: relative;
-    z-index: 2; /* Garante que o conteúdo esteja acima da sombra */
+    z-index: 2;
 }
 
-/* Estilo para o BlocoEsquerdo */
-.BlocoEsquerdo {
+/* Layout dos Blocos - Desktop */
+.BlocosWrapper {
     display: flex;
-    flex-direction: column; /* Posiciona os blocos 1 a 4 verticalmente */
-    gap: 15px; /* Espaçamento entre os blocos */
-    
-}
-
-
-.BlocoEsquerdo h3 {
-    font-family: var(--Letra);/* Fonte moderna e estilosa */
-    font-size: 1.8rem; /* Tamanho do texto */
-    color: var(--Laranja); /* Cor em destaque para o título */
-    text-transform: uppercase; /* Deixa o texto todo em maiúsculas */
-    margin-bottom: 15px; /* Espaçamento abaixo do título */
-    letter-spacing: 1px; /* Dá um espaçamento elegante entre as letras */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Adiciona um efeito de sombra leve */
-}
-
-/* Estilo para o parágrafo <p> */
-.BlocoEsquerdo p {
-    font-family: "Arial", sans-serif; /* Fonte clara e limpa para leitura */
-    font-size: 1.5rem; /* Tamanho do texto */
-    color: var(--branco-gelo); /* Cor escura para contraste */
-    line-height: 1.8; /* Espaçamento entre as linhas para melhorar a leitura */
-    margin-bottom: 10px; /* Espaçamento abaixo do parágrafo */
-    text-align: justify; /* Justifica o texto para alinhamento bonito */
-}
-
-/* Estilo individual dos blocos (bloco1, bloco2, etc.) */
-.BlocoEsquerdo .bloco1, 
-.BlocoEsquerdo .bloco2, 
-.BlocoEsquerdo .bloco3, 
-.BlocoEsquerdo .bloco4 {
-    margin-top: 4%;
-    background-color: var(--blackSombra);
-    padding: 50px;
-    border-radius: 0px 30px 0px 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
-    width: 80%; /* O bloco ocupa toda a largura disponível */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação para interação */
-
-}
-/* Efeito ao passar o mouse nos blocos */
-.BlocoEsquerdo .bloco1:hover, 
-.BlocoEsquerdo .bloco2:hover, 
-.BlocoEsquerdo .bloco3:hover, 
-.BlocoEsquerdo .bloco4:hover {
-    transform: translateY(-5px); /* Eleva levemente o bloco */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais pronunciada */
-}
-
-
-
-
-/* Estilo para o BlocoDireito */
-.BlocoDireito {
-    flex: 1; /* Faz o BlocoDireito ocupar espaço proporcional */
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    position: relative; /* Necessário para o pseudo-elemento */
-}
-
-/* Estilo para as imagens no BlocoDireito */
-.img-BlocoDireito {
-    display: flex; /* Alinha as imagens lado a lado */
-    gap: 100px; /* Espaçamento entre as imagens */
-    flex-wrap: wrap; /* Permite quebrar para a próxima linha se o espaço for insuficiente */
-}
-
-
-.img-BlocoDireito .image1 img,
-.img-BlocoDireito .image2 img,
-.img-BlocoDireito .image3 img {
-    width: 400px; /* Define uma largura fixa */
-    height: 950px; /* Define uma altura fixa */
-    object-fit: cover; /* Faz com que a imagem se ajuste ao tamanho sem distorcer */
-    border-radius: 8px; /* Mantém as bordas arredondadas */
-   
-    margin: 20px auto; /* Centraliza e adiciona espaço ao redor */
-    display: block; /* Garante que a imagem seja exibida como bloco */
-    align-items: center;
-    margin-top: 250px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra inicial */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
-}
-/* Efeito ao passar o mouse */
-.img-BlocoDireito .image1 img:hover,
-.img-BlocoDireito .image2 img:hover,
-.img-BlocoDireito .image3 img:hover {
-    transform: scale(1.1); /* Faz a imagem crescer levemente */
-    box-shadow: 0 15px 30px var(--blackSombra); /* Adiciona uma sombra mais intensa */
-}
-/* Sombra escura exclusiva para as imagens no hover */
-.img-BlocoDireito .image1 img:hover::after,
-.img-BlocoDireito .image2 img:hover::after,
-.img-BlocoDireito .image3 img:hover::after {
-    content: ""; /* Cria a camada extra */
-    position: absolute; /* Posiciona sobre a imagem */
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Camada escura semi-transparente */
-    border-radius: 8px; /* Respeita o mesmo arredondamento da imagem */
-    z-index: 1; /* Camada superior à imagem */
-    pointer-events: none; /* Impede interação com o pseudo-elemento */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 0px;
 }
 
-
-/*                           ---------------------------------                            */
-
-
-
-
-/* Estilo para a seção de Projetos e Portfólio */
-.projetos-portifolio {
-    background-color: var(--GrafiteFundo); /* Cor de fundo escura */
-    
-    text-align: center;
+/* >>>>>>>>>>>>>>>>>>>>> Bloco Esquerdo - Vertical <<<<<<<<<<<<<<<<<<<<<<<< */
+.BlocoEsquerdo {
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Organiza os elementos verticalmente */
-    align-items: center; /* Centraliza os elementos horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    padding: 200px 20px;
-
+    flex-direction: column;
+    gap: 20px; /* Reduzi um pouco o gap para melhor visualização da escada */
+    position: relative;
+    padding-left: 20px; /* Espaço para o deslocamento dos blocos */
+    margin-top: 0px; /* Espaço no topo para a escada */
 }
 
+.bloco1 {
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 15px;
+    border-radius: 20px 5px 20px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    width: 60%;
+    margin-left: 0;
+    position: relative;
+    z-index: 4; /* Maior z-index para ficar acima */
+}
 
-.projetos-portifolio h2 {  
-    font-size: 50px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: var(--Laranja); /* Cor dourada para o título */
+.bloco2 {
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 15px;
+    border-radius: 20px 5px 20px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    width: 60%;
+    margin-left: 70px; /* Deslocamento para direita */
+    position: relative;
+    z-index: 3;
+}
+
+.bloco3 {
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 15px;
+    border-radius: 20px 5px 20px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    width: 60%;
+    margin-left: 140px; /* Mais deslocamento */
+    position: relative;
+    z-index: 2;
+}
+
+.bloco4 {
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 15px;
+    border-radius: 20px 5px 20px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    width: 60%;
+    margin-left: 280px; /* Máximo deslocamento */
+    position: relative;
+    z-index: 1;
+}
+
+/* Efeitos hover mantidos */
+.bloco1:hover, .bloco2:hover, .bloco3:hover, .bloco4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    z-index: 5; /* Garante que o bloco hover fique acima de todos */
+}
+
+/* Textos (mantido igual) */
+.BlocoEsquerdo h3 {
+    font-size: 1.0rem;
+    color: var(--Laranja);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+}
+
+.BlocoEsquerdo p {
+    font-size: 0.9rem;
+    color: var(--branco-gelo);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .BlocoEsquerdo {
+        padding-left: 0;
+        margin-top: 0;
+    }
+    
+    .bloco1, .bloco2, .bloco3, .bloco4 {
+        margin-left: 0 !important;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+/* 
+////////////<!--seção de Projetos e Portfólio -->//////////////
+*/
+
+.projetos-portifolio {
+    background-color: black;
+    height: auto;
+    min-height: 85vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.container h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--Laranja);
+    margin: 0;
+    text-align: center;
 }
 
 .projetos-portifolio p {
-    font-size: 30px;
+    font-size: 15px;
+    color: var(--branco-gelo);
+    line-height: 1.6;
     margin-bottom: 40px;
-    line-height: 1.5;
-    color: var(--branco-gelo); /* Cor suave para o texto */
+    text-align: center;
 }
+
 .cardsN2 {
     display: flex;
-    justify-content: center; /* Centraliza os cards na página */
-    gap: 50px;
-    margin-bottom: 150px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin-bottom: 50px;
 }
 
 .card2 {
-    text-align: right; /* Centraliza o conteúdo no card */
-    padding: 30px 75px;
-    background-color: rgba(18, 18, 18, 0.611); /* Cor de fundo do card */
-    width: calc(50vw - 20%);  /* Adicionando sombra ao elemento */
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
-    border-radius: 10px;
-    transition: transform 0.3s ease; /* Animação ao passar o cursor */
+    text-align: left;
+    padding: 3px 12px;
+    background-color:var(--blackSombra);
+    border: 2px solid #ca6b1d;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(207, 103, 24, 0.686);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    font-family: 'Poppins', sans-serif;
 }
+
 .card2 img {
-    width: 90px; /* Ajuste o tamanho do ícone */
-    height: 100px; /* Tamanho fixo para garantir a forma redonda */
-    border: 5px solid black; /* Define a borda na cor laranja */
-    border-radius: 20%; /* Torna a borda redonda */
-    padding: 15px; /* Espaçamento interno para ajuste */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona um leve sombreamento */
-    transition: transform 0.3s ease; /* Animação para efeitos */
+    width: 15%;
+    height: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.57);
+    border-radius: 20%;
+    padding: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: var(--branco-gelo);
+    box-shadow: 0 4px 12px rgb(207, 103, 24);
+    background-color: var(--cinzaFundo);
 }
 
 .card2 img:hover {
-    transform: rotate(360deg) scale(1.1); /* Gira e aumenta ao passar o cursor */
+    transform: rotate(360deg) scale(1.1);
 }
 
-
-/* Efeito ao passar o cursor sobre todo o card */
 .card2:hover {
-    transform: scale(1.05); /* Leve aumento no tamanho do card */
+    transform: scale(1.05);
 }
-
-
 
 .card2 h3 {
-    font-size: 30px; /* Mantém o destaque */
-    font-weight: 600; /* Texto robusto */
-    color: var(--Laranja); /* Cor dourada */
+    font-size: 16px;
+    font-weight: 650;
+    color: var(--Laranja);
+    text-align: center;
+    margin: 10px 5px 20px 5px;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
-    text-align: left; /* Garante alinhamento ao lado esquerdo */ 
-    margin-bottom: 0px; /* Diminui o espaço entre h3 e p */
-
 }
-
-
-
 
 .card2 p {
-    font-size: 22px; /* Ajuste para manter equilíbrio com o título */
-    line-height: 1.3; /* Melhora a legibilidade do texto */
-    color: var(--branco-gelo); /* Mantém a cor suave */
-    text-align: left; /* Garante alinhamento ao lado esquerdo */
-    margin-top: 15px; 
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 12px;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .titulo-portfolio,
+    .projetos-portifolio p {
+        margin-left: 20px;
+    }
+    
+    .card2 {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
 /* Ajustando os estilos para portfolio */
+.portfolio h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--Laranja);
+    margin: 0;
+    text-align: center;
+}
+.portfolio p {
+    font-size: 15px;
+    color: var(--branco-gelo);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: center;
+}
 
 
-.portfolio-img {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.portfolio-carousel {
+    --main-width: 60%;
+    --side-width: 15%;
+    --gap: 20px;
+    --animation-duration: 15s;
+    
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.carousel-container {
+    width: 70%;
+    position: relative;
+}
+
+.carousel-slide {
     display: flex;
-    flex-wrap: wrap; /* Permite quebrar linhas em telas menores */
-    gap: 35px;
-    justify-content: center; /* Centraliza os elementos */
-    transition: transform 0.35s ease; /* Efeito suave */
+    gap: var(--gap);
+    animation: carousel-scroll var(--animation-duration) infinite linear;
 }
 
-.portfolio-img img {
-    transition: transform 0.35s ease, opacity 0.35s ease; /* Transição de escala e opacidade */
-    cursor: pointer; /* Indica que é interativo */
+@keyframes carousel-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
 }
 
-.portfolio-img img:hover {
-    transform: scale(1.3); /* Aumenta a imagem ao passar o cursor */
+.carousel-slide:hover {
+    animation-play-state: paused;
 }
 
-.portfolio-img img:not(:hover) {
-    opacity: 0.4; /* Reduz a opacidade dos outros ícones */
-    transform: scale(1); /* Mantém o tamanho normal */
+.carousel-slide img {
+    flex: 0 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* Imagem central (destaque) */
+.carousel-slide img:nth-child(3n+2) {
+    width: var(--main-width);
+    height: 400px;
+    object-fit: cover;
+    z-index: 2;
+    border: 3px solid var(--Laranja);
+    transform: scale(1.05);
+}
+
+/* Imagens laterais */
+.carousel-slide img:not(:nth-child(3n+2)) {
+    width: var(--side-width);
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.7;
+    align-self: center;
+    filter: brightness(0.7);
+}
+
+/* Pausa ao interagir */
+.carousel-container:hover .carousel-slide {
+    animation-play-state: paused;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .portfolio-carousel {
+        --main-width: 70%;
+        --side-width: 10%;
+    }
+    
+    .carousel-slide img:nth-child(3n+2) {
+        height: 300px;
+    }
+    
+    .carousel-slide img:not(:nth-child(3n+2)) {
+        height: 200px;
+    }
+}
+/* 
+////////////<!--FIM de Projetos e Portfólio -->//////////////
+*/
+
+/* 
+////////////<!-Seção Sobre a Empresa-->//////////////
+*/
+
+
+.sobre-empresa {
+    background-image: url(/projeto-matheus/images/img-FundoSobre.jpg);
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat:  no-repeat; /* Evita que a imagem de fundo seja repetida ao longo do elemento */
+    background-size: cover;  /* Ajusta para cobrir todo o contêiner */
+    height: 85vh; /* Altere o valor para aumentar a altura */
+    width: 100%; /* Mantém a largura ocupando toda a tela */
+    position: relative; /* Necessário para pseudo-elemento */
+}
+
+.sobre-empresa::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+  }
+
+.texto-sobre {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(10, 10, 10, 0.8);
+    border-radius: 10px;
+    border-left: 4px solid var(--Laranja);
+}
+
+.texto-sobre h2 {
+    font-size: 2.2rem;
+    color: var(--branco-gelo);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.texto-sobre p {
+    font-size: 1.1rem;
+    color: var(--Laranja);
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .texto-sobre {
+        padding: 30px;
+    }
+    
+    .texto-sobre h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-empresa {
+        padding: 60px 15px;
+    }
+    
+    .texto-sobre {
+        padding: 25px;
+    }
+    
+    .texto-sobre h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .texto-sobre p {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-sobre {
+        padding: 20px 15px;
+    }
+    
+    .texto-sobre h2 {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Seção de Contato */
+#orcamento {
+    background-color: var(--GrafiteFundo);
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#orcamento::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/projeto-matheus/images/img-fundo-padrao.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+#orcamento .container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#orcamento h2 {
+    font-size: 2.5rem;
+    color: var(--Laranja);
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+#orcamento h2::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--Laranja);
+}
+
+#form-contato {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+#form-contato input,
+#form-contato textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background-color: rgba(20, 20, 20, 0.7);
+    color: var(--branco-gelo);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#form-contato input:focus,
+#form-contato textarea:focus {
+    outline: none;
+    border-color: var(--Laranja);
+    box-shadow: 0 0 10px rgba(202, 107, 29, 0.5);
+}
+
+#form-contato textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#form-contato button {
+    background-color: var(--Laranja);
+    color: #000;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+#form-contato button:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+}
+
+/* Footer */
+footer {
+    background-color: #0a0a0a;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(202, 107, 29, 0.3);
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #orcamento {
+        padding: 60px 15px;
+    }
+    
+    #orcamento h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    #form-contato {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #orcamento h2 {
+        font-size: 1.7rem;
+    }
+    
+    #form-contato input,
+    #form-contato textarea {
+        padding: 12px 15px;
+    }
+    
+    #form-contato button {
+        padding: 14px 30px;
+        width: 100%;
+    }
 }
