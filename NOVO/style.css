@@ -105,7 +105,6 @@ nav .menu li a:active {
     text-decoration: none;
     display: inline-block;
     padding: 12px 30px;
-    margin: 10px 15px;
     background-color: #FFA500; /* Cor laranja original dos botões */
     color: white;
     font-size: 18px;
@@ -113,6 +112,7 @@ nav .menu li a:active {
     border-radius: 5px;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    margin-top: 130px;
   }
   
   #buttons a:hover {
@@ -168,7 +168,7 @@ nav .menu li a:active {
 
 /* Fundo da imagem com sombra  -----------------------------------------*/
 .header-banner {
-    background-image: url(/projeto-matheus/images/banner.1.png); /* Substitua pelo caminho da sua imagem */
+    background-image: url(/NOVO/images/banner.1.png); /* Substitua pelo caminho da sua imagem */
     background-position: center center; /* Centraliza a imagem */
     background-repeat:  no-repeat; /* Evita que a imagem de fundo seja repetida ao longo do elemento */
     background-size: cover;  /* Ajusta para cobrir todo o contêiner */
@@ -496,7 +496,7 @@ nav .menu li a:active {
     overflow: auto;   /* <-- permite rolagem caso ultrapasse */
     width: 100%;
     padding: 40px 20px;
-    background-image: url(/projeto-matheus/images/img-fundo\ eletrica.jpg);
+    background-image: url(/NOVO/images/img-fundo\ eletrica.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -839,7 +839,7 @@ nav .menu li a:active {
 
 
 .sobreEmpresa {
-    background-image: url(/projeto-matheus/images/img-FundoSobre.jpg);
+    background-image: url(/NOVO/images/img-FundoSobre.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain; /* Garante que a imagem caiba inteira */
